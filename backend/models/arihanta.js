@@ -3,20 +3,8 @@ const mongoose = require("mongoose");
 
 const arihantaSchema = new mongoose.Schema(
   {
-    name: {
-      type: String,
-      required: true,
-    },
-    address: {
-      type: String,
-      required: true,
-    },
-    phone: {
-      type: String,
-      required: true,
-    },
     products: {
-      type: String,
+      type: Array,
       required: true,
     },
     amount: {

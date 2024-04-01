@@ -43,17 +43,7 @@
 // export default Tablerow4;
 import React, { useState } from "react";
 
-const Tablerow4 = ({ label, value1, value2, total, handleInputChange }) => {
-  // const [total, setTotal] = useState(value1 * value2 || 0);
-
-  // const handleValueChange = (e) => {
-  //   const { name, value } = e.target;
-  //   // Call handleInputChange to update the parent state
-  //   handleInputChange(name, value);
-  //   // Calculate and update the total
-  //   setTotal(name === "value1" ? value * value2 : value1 * value);
-  // };
-
+const Tablerow4 = ({ label, table, handleInputChange }) => {
   return (
     <tr>
       <td className="py-2 px-4 border-b-5 border-gray-300">{label}</td>
