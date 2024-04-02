@@ -41,9 +41,10 @@
 // };
 
 // export default Tablerow4;
-import React, { useState } from "react";
+import React from "react";
 
-const Tablerow4 = ({ label, table, handleInputChange }) => {
+const Tablerow4 = ({ label, value, handleInputChange }) => {
+  const [value1, value2, value3] = value;
   return (
     <tr>
       <td className="py-2 px-4 border-b-5 border-gray-300">{label}</td>
@@ -52,7 +53,7 @@ const Tablerow4 = ({ label, table, handleInputChange }) => {
           type="number"
           name="value1"
           value={value1}
-          onChange={handleInputChange}
+          onChange={(e) => handleInputChange(e, 0)}
           className="rounded-md w-50 p-2 border"
         />
       </td>
@@ -61,15 +62,16 @@ const Tablerow4 = ({ label, table, handleInputChange }) => {
           type="number"
           name="value2"
           value={value2}
-          onChange={handleInputChange}
+          onChange={(e) => handleInputChange(e, 1)}
           className="rounded-md w-50 p-2 border"
         />
       </td>
       <td className="w-32 p-2 rounded-md border-b border-gray-300 text-black">
         <input
-          type="text"
-          value={total}
-          onChange={handleInputChange}
+          type="number"
+          name="value3"
+          value={value3}
+          onChange={(e) => handleInputChange(e, 2)}
           className="rounded-md w-50 p-2 border"
         />
       </td>
@@ -77,4 +79,25 @@ const Tablerow4 = ({ label, table, handleInputChange }) => {
   );
 };
 
+// const Tablerow4 = ({ label, value, handleInputChange }) => {
+//   // value should be an array
+//   const [value1, value2, value3] = value;
+
+//   return (
+//     <tr>
+//       <td>{label}</td>
+//       <td>
+//         <input name="value1" value={value1} onChange={handleInputChange} />
+//       </td>
+
+//       <td>
+//         <input name="value2" value={value2} onChange={handleInputChange} />
+//       </td>
+
+//       <td>
+//         <input name="value3" value={value3} onChange={handleInputChange} />
+//       </td>
+//     </tr>
+//   );
+// };
 export default Tablerow4;

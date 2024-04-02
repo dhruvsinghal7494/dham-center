@@ -5,10 +5,69 @@ import TableRow from "@/app/components/TableRow/TableRow";
 import { useState } from "react";
 import Tablerow4 from "@/app/components/Tablerow4/Tablerow4";
 
-const Arihanta = () => {
+const MNDivine = () => {
   // State to store user input values
   const [userData, setUserData] = useState({
-    products: "",
+    // medicines
+    befresh: ["", "", ""],
+    ntgas: ["", "", ""],
+    immunePower: ["", "", ""],
+    motapaMukti: ["", "", ""],
+    diabZ: ["", "", ""],
+    allerex: ["", "", ""],
+    livnu: ["", "", ""],
+    nilstone: ["", "", ""],
+    menstronil: ["", "", ""],
+    finedent: ["", "", ""],
+    amritRas: ["", "", ""],
+    brahmiJeevan: ["", "", ""],
+    heightIncrease: ["", "", ""],
+    jeevansar: ["", "", ""],
+    kafhar: ["", "", ""],
+    isotineEyedrop: ["", "", ""],
+
+    // general
+    patrika: ["", "", ""],
+    dhoopStick: ["", "", ""],
+    cgl: ["", "", ""],
+    dhoopCone: ["", "", ""],
+    hawanKund: ["", "", ""],
+    aasan: ["", "", ""],
+    dhuniPatraElec: ["", "", ""],
+    riyalBig: ["", "", ""],
+    riyalSmall: ["", "", ""],
+    mala108: ["", "", ""],
+    mala27: ["", "", ""],
+    gomukhi: ["", "", ""],
+    tilak: ["", "", ""],
+    dssCover: ["", "", ""],
+    gown: ["", "", ""],
+    newGown: ["", "", ""],
+    aanchmani: ["", "", ""],
+
+    // //murti
+    gurujiWooden: ["", "", ""],
+    durgaji: ["", "", ""],
+    shukraji: ["", "", ""],
+    hanumanji: ["", "", ""],
+    radhaKrishanji: ["", "", ""],
+    ramParivarji: ["", "", ""],
+    lakshmiGaneshji: ["", "", ""],
+    shivParivarji: ["", "", ""],
+    shaniYantra: ["", "", ""],
+
+    // //other
+    shampooBig: ["", "", ""],
+    shampooSmall: ["", "", ""],
+    specialDhuni: ["", "", ""],
+    locketNew: ["", "", ""],
+    bracelet: ["", "", ""],
+    penDrive: ["", "", ""],
+
+    //visheshkripa
+    visheshkripaHawanSamagri: ["", "", ""],
+
+    //total amount
     amount: "",
   });
   const [successMessage, setSuccessMessage] = useState("");
@@ -21,12 +80,23 @@ const Arihanta = () => {
     }));
   };
 
+  // const [userData, setUserData] = useState({
+  //   products: ['', '', ''] // initialize as empty array
+  // });
+
+  const handleInputChange = (name, value, index) => {
+    setUserData((prev) => ({
+      ...prev,
+      [name]: prev[name].map((item, i) => (i === index ? value : item)),
+    }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(userData);
 
     try {
-      const response = await fetch("http://localhost:5000/api/arihanta", {
+      const response = await fetch("http://localhost:5000/api/mndivine", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -39,7 +109,7 @@ const Arihanta = () => {
       }
 
       setUserData({
-        //medicines
+        // //medicines
         befresh: "",
         ntgas: "",
         immunePower: "",
@@ -57,7 +127,7 @@ const Arihanta = () => {
         kafhar: "",
         isotineEyedrop: "",
 
-        //general
+        // //general
         patrika: "",
         dhoopStick: "",
         cgl: "",
@@ -76,7 +146,7 @@ const Arihanta = () => {
         newGown: "",
         aanchmani: "",
 
-        //murti
+        // //murti
         gurujiWooden: "",
         durgaji: "",
         shukraji: "",
@@ -87,7 +157,7 @@ const Arihanta = () => {
         shivParivarji: "",
         shaniYantra: "",
 
-        //other
+        // //other
         shampooBig: "",
         shampooSmall: "",
         specialDhuni: "",
@@ -95,83 +165,86 @@ const Arihanta = () => {
         bracelet: "",
         penDrive: "",
 
-        //visheshkripaHawanSamagri: "",
+        visheshkripaHawanSamagri: "",
 
-        // bslnd
-        poojaHawanSamagri: "",
-        antiDandruff: "",
-        gaisant: "",
-        pachak: "",
-        vathar: "",
-        oodh1000: "",
-        oodh5000: "",
-        maykhanaCover: "",
-        locket40: "",
-        keyring: "",
-        dhamBag: "",
-        carStand: "",
-        photo100: "",
-        photo50: "",
-        photo20: "",
-        photo10: "",
-        diary: "",
+        // // bslnd
+        // poojaHawanSamagri: "",
+        // antiDandruff: "",
+        // gaisant: "",
+        // pachak: "",
+        // vathar: "",
+        // oodh1000: "",
+        // oodh5000: "",
+        // maykhanaCover: "",
+        // locket40: "",
+        // keyring: "",
+        // dhamBag: "",
+        // carStand: "",
+        // photo100: "",
+        // photo50: "",
+        // photo20: "",
+        // photo10: "",
+        // diary: "",
 
-        //bslndMurti (to be confirmed)
-        lakshmiGaneshjiMetal: "",
-        hanumanjiMetalSmall: "",
-        hanumanjiMetalBig: "",
-        durgajiMetal: "",
-        gangajiMetal: "",
-        radhaKrishanjiMetal: "",
-        ganeshjiMetal: "",
+        // //bslndMurti (to be confirmed)
+        // lakshmiGaneshjiMetal: "",
+        // hanumanjiMetalSmall: "",
+        // hanumanjiMetalBig: "",
+        // durgajiMetal: "",
+        // gangajiMetal: "",
+        // radhaKrishanjiMetal: "",
+        // ganeshjiMetal: "",
 
-        pardShivling: "",
-        pardBhasam: "",
-        shivlingJal: "",
-        charanPadukaBig: "",
-        charanPadukaSmall: "",
-        radhaKrishanShaktiFrame: "",
-        radhaKrishanShaktiBhasam: "",
+        // pardShivling: "",
+        // pardBhasam: "",
+        // shivlingJal: "",
+        // charanPadukaBig: "",
+        // charanPadukaSmall: "",
+        // radhaKrishanShaktiFrame: "",
+        // radhaKrishanShaktiBhasam: "",
 
-        //books
-        experiencingDivinity: "",
-        theEndofHumanSuff: "",
-        liberationBeforeDeath: "",
-        sadhguruVaniEng: "",
-        sadhguruVaniHindi: "",
-        divineDimention: "",
-        dharamAurMedicalScience: "",
-        mahayogiRajPunjabi: "",
-        mahayogiRajHindi: "",
-        mrityuSePehleMukti: "",
-        maykhannajiBookHindi: "",
-        maykhannajiBookUrdu: "",
-        chamatkarNahiSatyaHai: "",
-        gurugeetajiHindi: "",
-        gurugeetajiEng: "",
-        shatkam: "",
-        gsHindi: "",
-        gsEng: "",
-        gsPunjabi: "",
-        kalpatruChalisa: "",
-        adbuthsantHindi: "",
-        adbuthsantEng: "",
-        adhbuthUttar: "",
-        pkpHindi: "",
-        pkpEng: "",
-        pkpPunjabi: "",
+        // //books
+        // experiencingDivinity: "",
+        // theEndofHumanSuff: "",
+        // liberationBeforeDeath: "",
+        // sadhguruVaniEng: "",
+        // sadhguruVaniHindi: "",
+        // divineDimention: "",
+        // dharamAurMedicalScience: "",
+        // mahayogiRajPunjabi: "",
+        // mahayogiRajHindi: "",
+        // mrityuSePehleMukti: "",
+        // maykhannajiBookHindi: "",
+        // maykhannajiBookUrdu: "",
+        // chamatkarNahiSatyaHai: "",
+        // gurugeetajiHindi: "",
+        // gurugeetajiEng: "",
+        // shatkam: "",
+        // gsHindi: "",
+        // gsEng: "",
+        // gsPunjabi: "",
+        // kalpatruChalisa: "",
+        // adbuthsantHindi: "",
+        // adbuthsantEng: "",
+        // adhbuthUttar: "",
+        // pkpHindi: "",
+        // pkpEng: "",
+        // pkpPunjabi: "",
 
-        //bslndOther
-        whiteAasan: "",
-        dCure: "",
-        shivHariEat: "",
-        shivHariBath: "",
-        pranUrja: "",
-        calendar: "",
-        treeOfLife: "",
+        // //bslndOther
+        // whiteAasan: "",
+        // dCure: "",
+        // shivHariEat: "",
+        // shivHariBath: "",
+        // pranUrja: "",
+        // calendar: "",
+        // treeOfLife: "",
 
-        //to be confirmed
-        miracleWash: "",
+        // //to be confirmed
+        // miracleWash: "",
+
+        products: ["", "", ""],
+        amount: "",
       });
 
       const responseData = await response.json();
@@ -204,34 +277,249 @@ const Arihanta = () => {
             </tr>
           </thead>
           <tbody>
-            {/* <TableRow
-              label="Name"
-              value={userData.name}
-              handleInputChange={(event) =>
-                onChange("name", event.target.value)
-              }
-            />
-            <TableRow
-              label="Phone"
-              value={userData.phone}
-              handleInputChange={(event) =>
-                onChange("phone", event.target.value)
-              }
-            />
-            <TableRow
-              label="Address"
-              value={userData.address}
-              handleInputChange={(event) =>
-                onChange("address", event.target.value)
-              }
-            /> */}
+            {/* general  */}
             <Tablerow4
-              label="Products"
-              value={userData.products}
-              handleInputChange={(event) =>
-                onChange("products", event.target.value)
+              label="Patrika"
+              value={userData.patrika}
+              handleInputChange={(event, index) =>
+                handleInputChange("patrika", event.target.value, index)
               }
             />
+            <Tablerow4
+              label="Dhoop Stick"
+              value={userData.dhoopStick}
+              handleInputChange={(event, index) =>
+                handleInputChange("dhoopStick", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="CGL"
+              value={userData.cgl}
+              handleInputChange={(event, index) =>
+                handleInputChange("cgl", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="Dhoop Cone"
+              value={userData.dhoopCone}
+              handleInputChange={(event, index) =>
+                handleInputChange("dhoopCone", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="Hawan Kund"
+              value={userData.hawanKund}
+              handleInputChange={(event, index) =>
+                handleInputChange("hawanKund", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="Aasan"
+              value={userData.aasan}
+              handleInputChange={(event, index) =>
+                handleInputChange("aasan", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="Dhuni Patra Elec"
+              value={userData.dhuniPatraElec}
+              handleInputChange={(event, index) =>
+                handleInputChange("dhuniPatraElec", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="Riyal Big"
+              value={userData.riyalBig}
+              handleInputChange={(event, index) =>
+                handleInputChange("riyalBig", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="Riyal Small"
+              value={userData.riyalSmall}
+              handleInputChange={(event, index) =>
+                handleInputChange("riyalSmall", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="Mala 108"
+              value={userData.mala108}
+              handleInputChange={(event, index) =>
+                handleInputChange("mala108", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="Mala 27"
+              value={userData.mala27}
+              handleInputChange={(event, index) =>
+                handleInputChange("mala27", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="Gomukhi"
+              value={userData.gomukhi}
+              handleInputChange={(event, index) =>
+                handleInputChange("gomukhi", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="Chandan Tilak"
+              value={userData.tilak}
+              handleInputChange={(event, index) =>
+                handleInputChange("tilak", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="DSS Cover"
+              value={userData.dssCover}
+              handleInputChange={(event, index) =>
+                handleInputChange("dssCover", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="Gown"
+              value={userData.gown}
+              handleInputChange={(event, index) =>
+                handleInputChange("gown", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="New Gown"
+              value={userData.newGown}
+              handleInputChange={(event, index) =>
+                handleInputChange("newGown", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="Aanchmani"
+              value={userData.aanchmani}
+              handleInputChange={(event, index) =>
+                handleInputChange("aanchmani", event.target.value, index)
+              }
+            />
+            {/* medicines */}
+            <Tablerow4
+              label="Befresh"
+              value={userData.befresh}
+              handleInputChange={(event, index) =>
+                handleInputChange("befresh", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="NT Gas"
+              value={userData.ntgas}
+              handleInputChange={(event, index) =>
+                handleInputChange("ntgas", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="Immune Power"
+              value={userData.immunePower}
+              handleInputChange={(event, index) =>
+                handleInputChange("immunePower", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="MotapaMukti"
+              value={userData.motapaMukti}
+              handleInputChange={(event, index) =>
+                handleInputChange("motapaMukti", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="Diab-Z"
+              value={userData.diabz}
+              handleInputChange={(event, index) =>
+                handleInputChange("diabz", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="Allerex"
+              value={userData.allerex}
+              handleInputChange={(event, index) =>
+                handleInputChange("allerex", event.target.value, index)
+              }
+            />
+            <Tablerow4
+              label="Livnu"
+              value={userData.livnu}
+              handleInputChange={(event, index) =>
+                handleInputChange("livnu", event.target.value, index)
+              }
+            />
+
+            <Tablerow4
+              label="Nilstone"
+              value={userData.nilstone}
+              handleInputChange={(event, index) =>
+                handleInputChange("nilstone", event.target.value, index)
+              }
+            />
+
+            <Tablerow4
+              label="Menstronil"
+              value={userData.menstronil}
+              handleInputChange={(event, index) =>
+                handleInputChange("menstronil", event.target.value, index)
+              }
+            />
+
+            <Tablerow4
+              label="Finedent"
+              value={userData.finedent}
+              handleInputChange={(event, index) =>
+                handleInputChange("finedent", event.target.value, index)
+              }
+            />
+
+            <Tablerow4
+              label="Amrit Ras"
+              value={userData.amritRas}
+              handleInputChange={(event, index) =>
+                handleInputChange("amritRas", event.target.value, index)
+              }
+            />
+
+            <Tablerow4
+              label="Brahmi Jeevan"
+              value={userData.brahmiJeevan}
+              handleInputChange={(event, index) =>
+                handleInputChange("brahmiJeevan", event.target.value, index)
+              }
+            />
+
+            <Tablerow4
+              label="Height Increase"
+              value={userData.heightIncrease}
+              handleInputChange={(event, index) =>
+                handleInputChange("heightIncrease", event.target.value, index)
+              }
+            />
+
+            <Tablerow4
+              label="Jeevansar"
+              value={userData.jeevansar}
+              handleInputChange={(event, index) =>
+                handleInputChange("jeevansar", event.target.value, index)
+              }
+            />
+
+            <Tablerow4
+              label="Kafhar"
+              value={userData.kafhar}
+              handleInputChange={(event, index) =>
+                handleInputChange("kafhar", event.target.value, index)
+              }
+            />
+
+            <Tablerow4
+              label="Isotine Eyedrop"
+              value={userData.isotineEyedrop}
+              handleInputChange={(event, index) =>
+                handleInputChange("isotineEyedrop", event.target.value, index)
+              }
+            />
+            {/* amount */}
             <TableRow
               label="Amount"
               value={userData.amount}
@@ -258,4 +546,4 @@ const Arihanta = () => {
   );
 };
 
-export default Arihanta;
+export default MNDivine;

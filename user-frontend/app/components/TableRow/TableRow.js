@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Tablerow = ({ label, value, handleInputChange }) => {
   return (

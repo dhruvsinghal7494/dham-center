@@ -36,17 +36,17 @@ mongoose
     console.log("Connection unsuccessful");
   });
 
-const arihanta = require("../backend/models/arihanta");
+const mndivine = require("./models/mndivine");
 const bslndDonation = require("../backend/models/bslndDonation");
 const bslndNamaskar = require("../backend/models/bslndNamaskar");
 const nsp = require("../backend/models/nsp");
 const visheshkripa = require("../backend/models/visheshkripa");
 const goshala = require("../backend/models/goshala");
 
-app.post("/api/arihanta", async (req, res) => {
+app.post("/api/mndivine", async (req, res) => {
   try {
-    const arihantaData = new arihanta(req.body);
-    await arihantaData.save();
+    const mndivineData = new mndivine(req.body);
+    await mndivineData.save();
     res.status(200).json({ message: "Entry saved successfully" });
   } catch (error) {
     console.error(error);
@@ -109,3 +109,76 @@ app.post("/api/visheshkripa", async (req, res) => {
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
+
+// const express = require('express');
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
+const session = require("express-session");
+const bodyParser = require("body-parser");
+const crypto = require("crypto");
+
+// const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
+const sessionSecret =
+  process.env.SESSION_SECRET || crypto.randomBytes(64).toString("hex");
+
+app.use(
+  session({
+    secret: sessionSecret,
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+const User = require("./models/user");
+
+passport.use(
+  new LocalStrategy(async (username, password, done) => {
+    try {
+      const user = await User.findOne({ username });
+
+      if (!user) {
+        return done(null, false);
+      }
+
+      if (!user.validatePassword(password)) {
+        return done(null, false);
+      }
+
+      return done(null, user);
+    } catch (error) {
+      return done(error);
+    }
+  })
+);
+
+passport.serializeUser(function (user, done) {
+  done(null, user.username);
+});
+
+passport.deserializeUser(function (username, done) {
+  // Here you would fetch the user from the database using the username
+  // For now, we will just return an object with the username
+  done(null, { username: username });
+});
+
+app.get("/api/login", function (req, res) {
+  // res.send(
+  //   '<form action="/login" method="post"><div><label>Username:</label><input type="text" name="username"/></div><div><label>Password:</label><input type="password" name="password"/></div><div><input type="submit" value="Log In"/></div></form>'
+  // );
+});
+
+app.post(
+  "/api/login",
+  passport.authenticate("local", { failureRedirect: "/login" }),
+  function (req, res) {
+    res.redirect("/");
+  }
+);
+
+// app.listen(port);

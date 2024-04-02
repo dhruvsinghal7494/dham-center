@@ -1,25 +1,26 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/pages/about/page": [
+    "/login/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/pages/about/page.js"
+      "static/css/app/login/page.css",
+      "static/chunks/app/login/page.js"
     ],
-    "/pages/contact/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/pages/contact/page.js"
+      "static/chunks/app/page.js"
+    ],
+    "/pages/mndivine/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/pages/mndivine/page.js"
     ]
   }
 }
