@@ -43,7 +43,7 @@
 // export default Tablerow4;
 import React from "react";
 
-const Tablerow4 = ({ label, value, handleInputChange }) => {
+const Tablerow4 = ({ label, value = ["", "", ""], handleInputChange }) => {
   const [value1, value2, value3] = value;
   return (
     <tr>
