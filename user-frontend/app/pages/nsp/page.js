@@ -2,7 +2,7 @@
 import Navbar from "@/app/components/Navbar/Navbar";
 import TableRow from "@/app/components/TableRow/TableRow";
 import React, { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 import "dotenv/config";
 import Tablerow4 from "@/app/components/Tablerow4/Tablerow4";
 
@@ -214,7 +214,7 @@ const NSPpage = () => {
   return (
     <div className="container mx-auto pt-6 pb-2">
       {/* {userData.username} */}
-      <Navbar />
+      {/* <Navbar /> */}
       <form className="w-200 mx-auto bg-red pt-8 pb-4 pl-8 pr-8 border border-gray-300 rounded-md">
         <table className="w-full mt-6">
           <thead>

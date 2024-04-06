@@ -4,7 +4,7 @@ import React from "react";
 export default function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <main className="flex min-h-screen flex-col items-center justify-between p-8">
         <div className="mt-20 grid text-center mx-auto lg:max-w-9xl lg:w-full lg:mb-0 lg:grid-cols-2 lg:text-center">
           <a

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 // import "flowbite";
 
@@ -183,7 +183,13 @@ import Image from "next/image";
 
 const Navbar = () => {
   // const [color, setColor] = useState(false);
-  const [selected, setSelected] = useState();
+  const [selected, setSelected] = useState("home");
+  const ref = useRef(selected);
+
+  const handleColor = () => {
+    !setSelected;
+    ref.current.color = "bg-blue-800";
+  };
 
   return (
     <div>
@@ -201,7 +207,7 @@ const Navbar = () => {
               height="36"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              NSP
+              Mahabrahmrishi
             </span>
           </a>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">

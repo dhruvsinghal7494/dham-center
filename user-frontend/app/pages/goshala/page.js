@@ -60,7 +60,7 @@ const Goshala = () => {
   return (
     <div className="container mx-auto pt-6 pb-2">
       {/* {userData.username} */}
-      <Navbar />
+      {/* <Navbar /> */}
       <form className="max-w-lg mx-auto bg-red pt-8 pb-4 pl-8 pr-8 border border-gray-300 rounded-md">
         <table className="w-full mt-6">
           <thead>
