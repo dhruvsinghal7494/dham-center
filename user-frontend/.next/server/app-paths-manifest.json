@@ -1,8 +1,5 @@
 {
   "/page": "app/page.js",
-  "/pages/contact/page": "app/pages/contact/page.js",
   "/pages/about/page": "app/pages/about/page.js",
-  "/pages/nsp/page": "app/pages/nsp/page.js",
-  "/pages/bslndDonation/page": "app/pages/bslndDonation/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/login/page": "app/login/page.js"
 }

@@ -184,12 +184,12 @@ import Image from "next/image";
 const Navbar = () => {
   // const [color, setColor] = useState(false);
   const [selected, setSelected] = useState("home");
-  const ref = useRef(selected);
+  // const ref = useRef(selected);
 
-  const handleColor = () => {
-    !setSelected;
-    ref.current.color = "bg-blue-800";
-  };
+  // const handleColor = () => {
+  //   !setSelected;
+  //   ref.current.color = "bg-blue-800";
+  // };
 
   return (
     <div>

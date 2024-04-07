@@ -34,8 +34,10 @@ export const addUser = async (formData) => {
     throw new Error("Failed to create user!");
   }
 
-  revalidatePath("/dashboard/users");
-  redirect("/dashboard/users");
+  revalidatePath("/d");
+  redirect("/");
+  // revalidatePath("/dashboard/users");
+  // redirect("/dashboard/users");
 };
 
 export const updateUser = async (formData) => {
@@ -66,8 +68,8 @@ export const updateUser = async (formData) => {
     throw new Error("Failed to update user!");
   }
 
-  revalidatePath("/dashboard/users");
-  redirect("/dashboard/users");
+  revalidatePath("/");
+  redirect("/");
 };
 
 export const addProduct = async (formData) => {
@@ -177,5 +179,5 @@ export const authenticate = async (prevState, formData) => {
     console.log(err);
     return "Wrong Credentials";
   }
-  redirect("/dashboard");
+  redirect("/");
 };
