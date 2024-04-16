@@ -1,6 +1,7 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import Logo from "@/public/Guruji.webp";
 // import "flowbite";
 
 // const Navbar = () => {
@@ -200,7 +201,7 @@ const Navbar = () => {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <Image
-              src="/Guruji.webp"
+              src={Logo}
               className="h-8"
               alt="Flowbite Logo"
               width="32"

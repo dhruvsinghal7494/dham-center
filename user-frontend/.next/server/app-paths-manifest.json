@@ -1,4 +1,9 @@
 {
-  "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
+  "/pages/page": "app/pages/page.js",
+  "/pages/nsp/page": "app/pages/nsp/page.js",
+  "/pages/about/page": "app/pages/about/page.js",
+  "/pages/bslndDonation/page": "app/pages/bslndDonation/page.js",
+  "/pages/bslndNamaskar/page": "app/pages/bslndNamaskar/page.js",
+  "/pages/goshala/page": "app/pages/goshala/page.js",
+  "/pages/visheshkripa/page": "app/pages/visheshkripa/page.js"
 }
