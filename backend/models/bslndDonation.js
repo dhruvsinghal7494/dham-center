@@ -3,13 +3,6 @@ const mongoose = require("mongoose");
 
 const bslndDonationSchema = new mongoose.Schema(
   {
-    // center_name: {
-    //   type: String,
-    //   required: true,
-    //   unique: true,
-    //   min: 3,
-    //   max: 20,
-    // },
     name: {
       type: String,
       required: true,

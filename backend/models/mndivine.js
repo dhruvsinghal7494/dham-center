@@ -3,209 +3,258 @@ const mongoose = require("mongoose");
 const mndivineSchema = new mongoose.Schema(
   {
     // //medicines
-    befresh: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    ntgas: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    immunePower: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    motapaMukti: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    diabZ: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    allerex: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    livnu: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    nilstone: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    menstronil: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    finedent: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    amritRas: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    brahmiJeevan: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    heightIncrease: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    jeevansar: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    kafhar: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    isotineEyedrop: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
+    befresh: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    ntgas: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    immunePower: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    motapaMukti: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    diabZ: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    allerex: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    livnu: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    nilstone: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    menstronil: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    finedent: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    amritRas: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    brahmiJeevan: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    heightIncrease: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    jeevansar: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    kafhar: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    isotineEyedrop: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
 
     // //general
-    patrika: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    dhoopStick: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    cgl: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    dhoopCone: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    hawanKund: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    aasan: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    dhuniPatraElec: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    riyalBig: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    riyalSmall: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    mala108: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    mala27: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    gomukhi: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    tilak: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    dssCover: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    gown: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    newGown: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    aanchmani: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
+    patrika: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    dhoopStick: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    cgl: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    dhoopCone: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    hawanKund: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    aasan: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    dhuniPatraElec: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    riyalBig: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    riyalSmall: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    mala108: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    mala27: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    gomukhi: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    tilak: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    dssCover: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    gown: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    newGown: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    aanchmani: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
 
     // //murti
-    gurujiWooden: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    durgaji: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    shukraji: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    hanumanji: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    radhaKrishanji: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    ramParivarji: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    lakshmiGaneshji: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    shivParivarji: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    shaniYantra: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
+    gurujiWooden: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    durgaji: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    shukraji: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    hanumanji: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    radhaKrishanji: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    ramParivarji: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    lakshmiGaneshji: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    shivParivarji: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    shaniYantra: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
 
     // //other
-    shampooBig: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    shampooSmall: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    specialDhuni: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    locketNew: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    bracelet: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
-    penDrive: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
+    shampooBig: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    shampooSmall: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    specialDhuni: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    locketNew: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    bracelet: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    penDrive: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
 
-    visheshkripaHawanSamagri: {
-      type: Array,
-      default: ["0", "0", "0"],
-    },
+    visheshkripaHawanSamagri: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
 
     // total amount
     amount: {

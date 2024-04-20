@@ -4,52 +4,208 @@ const mongoose = require("mongoose");
 const nspSchema = new mongoose.Schema(
   {
     // bslnd
-    poojaHawanSamagri: { type: Array, default: ["0", "0", "0"] },
-    antiDandruff: { type: Array, default: ["0", "0", "0"] },
-    gaisant: { type: Array, default: ["0", "0", "0"] },
-    pachak: { type: Array, default: ["0", "0", "0"] },
-    vathar: { type: Array, default: ["0", "0", "0"] },
-    oodh1000: { type: Array, default: ["0", "0", "0"] },
-    oodh500: { type: Array, default: ["0", "0", "0"] },
-    maykhanaCover: { type: Array, default: ["0", "0", "0"] },
-    locket40: { type: Array, default: ["0", "0", "0"] },
-    keyring: { type: Array, default: ["0", "0", "0"] },
-    dhamBag: { type: Array, default: ["0", "0", "0"] },
-    carStand: { type: Array, default: ["0", "0", "0"] },
-    photo100: { type: Array, default: ["0", "0", "0"] },
-    photo50: { type: Array, default: ["0", "0", "0"] },
-    photo20: { type: Array, default: ["0", "0", "0"] },
-    photo10: { type: Array, default: ["0", "0", "0"] },
-    diary: { type: Array, default: ["0", "0", "0"] },
+    poojaHawanSamagri: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    antiDandruff: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    gaisant: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    pachak: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    vathar: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    oodh1000: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    oodh500: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    maykhanaCover: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    locket40: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    keyring: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    dhamBag: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    carStand: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    photo100: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    photo50: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    photo20: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    photo10: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    diary: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
 
     //bslndMurti (to be confirmed)
-    lakshmiGaneshjiMetal: { type: Array, default: ["0", "0", "0"] },
-    hanumanjiMetalSmall: { type: Array, default: ["0", "0", "0"] },
-    hanumanjiMetalBig: { type: Array, default: ["0", "0", "0"] },
-    durgajiMetal: { type: Array, default: ["0", "0", "0"] },
-    gangajiMetal: { type: Array, default: ["0", "0", "0"] },
-    radhaKrishanjiMetal: { type: Array, default: ["0", "0", "0"] },
-    ganeshjiMetal: { type: Array, default: ["0", "0", "0"] },
+    lakshmiGaneshjiMetal: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    hanumanjiMetalSmall: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    hanumanjiMetalBig: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    durgajiMetal: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    gangajiMetal: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    radhaKrishanjiMetal: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    ganeshjiMetal: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
 
-    pardShivling: { type: Array, default: ["0", "0", "0"] },
-    pardBhasam: { type: Array, default: ["0", "0", "0"] },
-    shivlingJal: { type: Array, default: ["0", "0", "0"] },
-    charanPadukaBig: { type: Array, default: ["0", "0", "0"] },
-    charanPadukaSmall: { type: Array, default: ["0", "0", "0"] },
-    radhaKrishanShaktiFrame: { type: Array, default: ["0", "0", "0"] },
-    radhaKrishanShaktiBhasam: { type: Array, default: ["0", "0", "0"] },
+    pardShivling: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    pardBhasam: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    shivlingJal: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    charanPadukaBig: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    charanPadukaSmall: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    radhaKrishanShaktiFrame: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    radhaKrishanShaktiBhasam: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
 
     //bslndOther
-    whiteAasan: { type: Array, default: ["0", "0", "0"] },
-    dCure: { type: Array, default: ["0", "0", "0"] },
-    shivHariEat: { type: Array, default: ["0", "0", "0"] },
-    shivHariBath: { type: Array, default: ["0", "0", "0"] },
-    pranUrja: { type: Array, default: ["0", "0", "0"] },
-    calendar: { type: Array, default: ["0", "0", "0"] },
-    treeOfLife: { type: Array, default: ["0", "0", "0"] },
+    whiteAasan: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    dCure: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    shivHariEat: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    shivHariBath: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    pranUrja: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    calendar: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
+    treeOfLife: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
 
     //to be confirmed
-    miracleWash: { type: Array, default: ["0", "0", "0"] },
+    miracleWash: [
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+      { type: Number, default: "0" },
+    ],
 
     amount: {
       type: Number,

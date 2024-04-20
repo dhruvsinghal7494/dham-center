@@ -1,7 +1,3 @@
 {
-  "/pages/page": "app/pages/page.js",
-  "/pages/bslndNamaskar/page": "app/pages/bslndNamaskar/page.js",
-  "/pages/nsp/page": "app/pages/nsp/page.js",
-  "/pages/visheshkripa/page": "app/pages/visheshkripa/page.js",
-  "/pages/goshala/page": "app/pages/goshala/page.js"
+  "/pages/page": "app/pages/page.js"
 }

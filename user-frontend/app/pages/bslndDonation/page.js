@@ -1,5 +1,4 @@
 "use client";
-import Navbar from "@/app/components/Navbar/Navbar";
 import React from "react";
 import TableRow from "@/app/components/TableRow/TableRow";
 import { useState } from "react";
@@ -10,7 +9,7 @@ const BSLND = () => {
     name: "",
     phone: "",
     address: "",
-    products: "",
+    purpose: "",
     amount: "",
   });
   const [successMessage, setSuccessMessage] = useState("");
@@ -28,7 +27,7 @@ const BSLND = () => {
     console.log(userData);
 
     try {
-      const response = await fetch("http://localhost:5000/api/bslnd", {
+      const response = await fetch("http://localhost:5000/api/bslndDonation", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

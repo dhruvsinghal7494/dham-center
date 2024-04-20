@@ -11,12 +11,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/error.js"
     ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
-    ],
     "/pages/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -26,41 +20,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/pages/layout.js"
-    ],
-    "/pages/nsp/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/pages/nsp/page.js"
-    ],
-    "/pages/about/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/pages/about/page.js"
-    ],
-    "/pages/contact/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/pages/contact/page.js"
-    ],
-    "/pages/bslndDonation/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/pages/bslndDonation/page.js"
-    ],
-    "/pages/bslndNamaskar/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/pages/bslndNamaskar/page.js"
-    ],
-    "/pages/goshala/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/pages/goshala/page.js"
-    ],
-    "/pages/visheshkripa/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/pages/visheshkripa/page.js"
     ]
   }
 }

@@ -25,7 +25,7 @@ const MNDivine = () => {
     console.log(userData);
 
     try {
-      const response = await fetch("http://localhost:5000/api/mndivine", {
+      const response = await fetch("http://localhost:5000/api/bslndNamaskar", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
