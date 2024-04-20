@@ -11,15 +11,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/error.js"
     ],
-    "/pages/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/pages/page.js"
-    ],
     "/pages/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/pages/layout.js"
+    ],
+    "/pages/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/pages/page.js"
     ]
   }
 }

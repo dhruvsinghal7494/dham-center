@@ -1,9 +1,7 @@
-"use server";
-
 // import { revalidatePath } from "next/cache";
 import { User } from "./models";
 import { connectToDB } from "./utils";
-import { redirect } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import { NextResponse } from "next/server";
 // import bcrypt from "bcrypt";
 import { signIn } from "../auth";
@@ -151,7 +149,8 @@ export const authenticate = async (prevState, formData) => {
     console.log(err);
     return "Wrong Credentials";
   }
-  redirect("/pages");
+  // redirect("/pages");
+  Router.push("/pages");
 };
 
 // export const deleteUser = async (formData) => {
